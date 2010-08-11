@@ -39,11 +39,11 @@ h3 code {
 }
 
 a {
-    color: #773399;
+    color: blue;
     text-decoration: none;
 }
 a:visited {
-    color: #551177;
+    color: navy;
 }
 a:hover {
     text-decoration: underline;
