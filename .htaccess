@@ -1,2 +1,2 @@
-Action markdown /~USERNAME/markdown/handler.php
+Action markdown /markdown-handler/markdown/handler.php
 AddHandler markdown .md
