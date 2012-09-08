@@ -12,7 +12,7 @@
 require('markdown.php');
 require('smartypants.php');
 
-$legalExtensions = array('md', 'markdown');
+$legalExtensions = array('md', 'markdown', 'mdown');
 
 $file = realpath($_SERVER['PATH_TRANSLATED']);
 if($file &&
