@@ -3,7 +3,7 @@
 <html>
   <head>
 	<meta name="content-type" http-equiv="content-type" value="text/html; utf-8"/>
-    <link rel="stylesheet" type="text/css" href="/markdown-handler/md-styles.css"/>
+    <link rel="stylesheet" type="text/css" href="/markdown/md-styles.css"/>
 	<title>Markdown output</title>
   </head>
   <body>

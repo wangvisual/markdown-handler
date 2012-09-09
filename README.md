@@ -17,3 +17,10 @@ Installation
 
 Now visit a .md file on your webserver; you should see it as properly
 styled HTML.
+
+You will need PHP and mod_handler active for Apache servers.
+
+display-test.md
+---------------
+This file is provided to allow you to test to see if everything is displaying
+the way it should.
