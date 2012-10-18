@@ -3,8 +3,9 @@
 <html>
   <head>
 	<meta name="content-type" http-equiv="content-type" value="text/html; utf-8"/>
-    <link rel="stylesheet" type="text/css" href="/markdown/md-styles.css"/>
-	<title>Markdown output</title>
+	<link rel="stylesheet" type="text/css" href="/markdown/md-styles.css"/>
+	<?php echo "<title>", basename(realpath($_SERVER['PATH_TRANSLATED'])), "</title>"; ?>
+
   </head>
   <body>
 <?php
