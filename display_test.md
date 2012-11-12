@@ -1,5 +1,5 @@
-﻿# Markdown Display Test #
-**v1.0.8, Sepember 8, 2012**
+# Markdown Display Test #
+**v1.0.17, November 12, 2012**
 
 This file serves three purposes:  
 1) a markdown language reference,  
@@ -276,11 +276,11 @@ SmartyPants transforms:
  * as the thousand seperator 100 000
  * between a value and common unit symbols  12 kg  and 10 °C
 	
-# jsMath #
-jsMath has been activated, allowing the typing of math formulas. For more
-information about jsMath: <http://www.math.union.edu/~dpvc/jsmath/>. For
+# MathJax #
+Math display via MathJax has been activated, allowing the typing of math formulas. For more
+information about MathJax: <http://www.mathjax.org/>. For
 more information on how to use this: <https://github.com/drdrang/php-markdown-extra-math>.
-In general formulas are encapsulated by \ ( and \ ).
+In general formulas are encapsulated by \ ( and \ ) or \ [ and \ ].
 
 Formulas can be inline
 
@@ -291,20 +291,20 @@ where \(\alpha = (t_1 - t_0)/L\) is the rate at which the thickness increases
 
 Some other samples:
 
-	\(\sqrt{x^2+1}\)
+	\[\sqrt{x^2+1}\]
 	\(\root 3\of {1-\pi x^2}\)
-	\(\overbrace{x+\cdots+x}^{k\;\rm times}\)
+	\[\overbrace{x+\cdots+x}^{k\;\rm times}\]
 	\(f(x)=\cases {
       x^2+1&\text{if $x<0$}\cr
       1-x&\text{otherwise}
 	}\)
 	\(\left[\matrix{a^2-b^2& -1\\ 1& 2ab}\right]\)
 
-\(\sqrt{x^2+1}\)
+\[\sqrt{x^2+1}\]
 
 \(\root 3\of {1-\pi x^2}\)
 
-\(\overbrace{x+\cdots+x}^{k\;\rm times}\)
+\[\overbrace{x+\cdots+x}^{k\;\rm times}\]
 
 \(f(x)=\cases {
   x^2+1&\text{if $x<0$}\cr
@@ -335,5 +335,6 @@ v_\infty \left[ \pi a + \frac{2d}{\pi a + 2dw^{-1/2}(w-1)^{1/2}} \right]^-\)
 * Markdown - <http://daringfireball.net/projects/markdown/syntax>
 * Markdown Plus - <http://michelf.ca/projects/php-markdown/extra/>
 * SmartyPants (in php) - <http://michelf.ca/projects/php-smartypants/>
-* jsMath - <http://www.math.union.edu/~dpvc/jsmath/>
-* Markdown and jsMath - <https://github.com/drdrang/php-markdown-extra-math>
+* MathJax - <http://www.mathjax.org/>
+* jsMath (an alternative to MathJax) - <http://www.math.union.edu/~dpvc/jsmath/>
+* Markdown and MathJax - <https://github.com/drdrang/php-markdown-extra-math>

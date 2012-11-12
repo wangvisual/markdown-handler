@@ -2,7 +2,7 @@ Markdown Handler
 ================
 
 This little script adds an Apache handler that lets you view Markdown
-files with a .md extension more prettily on your webserver.
+files with a .md (or .mdown or .markdown) extension more prettily on your webserver.
 
 It's based on a PHP Markdown implementation by [Michel
 Fortin](http://www.michelf.com/).
@@ -19,6 +19,9 @@ Now visit a .md file on your webserver; you should see it as properly
 styled HTML.
 
 You will need PHP and mod_handler active for Apache servers.
+
+MathJax does not need to be installed, as it is automatically loaded
+from the MathJax CDN.
 
 display-test.md
 ---------------
