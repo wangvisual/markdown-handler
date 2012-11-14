@@ -1,5 +1,5 @@
 # Markdown Display Test #
-**v1.0.17, November 12, 2012**
+**v1.1.2, November 13, 2012**
 
 This file serves three purposes:  
 1) a markdown language reference,  
@@ -115,7 +115,7 @@ This is [an example][id] reference-method link.
 As a bonus, email addresses are automatically obscured.
 
 # Images #
-	![Alt text](/files/expand_arrow.JPG "Image call example")
+	![Alt text](/path/to/img.jpg "Image call example")
 	![Alt text](/path/to/img.jpg)
 	![Alt text](/path/to/img.jpg "Title")
 	![Alt text][img1]
@@ -161,6 +161,7 @@ if (this_is_more_code == true && !indented) {
     // tild wrapped code blocks, also not indented
 }
 ~~~
+<!-- _ this is just to make it display nice is Notepad++ -->
 
 For inline code:
 
@@ -247,7 +248,7 @@ can make sure Markdown doesn't interpret these characters by placing a backslash
     \  backslash
     `  backtick
     *  asterisk
-    _  underscore
+    _  underscore 
     {} curly braces
     [] square brackets
     () parentheses
@@ -259,7 +260,7 @@ can make sure Markdown doesn't interpret these characters by placing a backslash
     :  colon
     |  pipe
 	
-	
+<!-- _ this is just to make it display nice is Notepad++ -->	
 # SmartyPants #
 SmartyPants transforms:
 
@@ -330,6 +331,70 @@ Some other samples:
 \(\mathop{\rm grd} \phi(z) =
 \left(a+\frac{2d}{\pi}\right) v_\infty\, \overline{f'(z)} =
 v_\infty \left[ \pi a + \frac{2d}{\pi a + 2dw^{-1/2}(w-1)^{1/2}} \right]^-\)
+
+<div class="col2" markdown="1">
+# 2 Column Display
+
+This is text that is supposed to be displayed in
+2 columns. Invoke columns by using:
+~~~
+	<div class="col2" markdown="1"> text here </div>
+~~~
+Markdown will be rendered. `<H1>`, `<H2>`, and `<hr>` will span both columns.
+This is not a function of the Markdown, but rather the stylesheet.
+
+..
+
+# Two Column Break ============ &
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pretium metus.
+Cras tempor lacinia risus in porttitor. In hac habitasse platea dictumst. Proin
+auctor nibh in metus condimentum ut lacinia magna rhoncus.
+
+Donec non enim id
+dolor elementum tincidunt. Fusce et quam nulla. Vivamus diam lacus, ultrices
+quis malesuada ullamcorper, elementum in elit.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et leo ac libero 
+pellentesque volutpat. Nunc euismod fermentum augue, vel laoreet ante gravida nec.
+Etiam et odio ac ante interdum adipiscing.
+
+Ut gravida nulla at erat accumsan quis
+fermentum est sagittis. Suspendisse dignissim congue nibh, quis porttitor magna
+dignissim at. Sed ut eros est.
+
+## Another Two Column Break ================ &
+
+Maecenas dictum sodales leo in sagittis. Sed ullamcorper enim nec ligula tempus
+eu gravida enim laoreet. Nunc eu feugiat erat.
+
+Morbi interdum, nisl at fringilla
+semper, magna lorem laoreet neque, ac posuere risus diam et odio. Mauris iaculis
+aliquet augue, vel ullamcorper massa rutrum pulvinar. Curabitur nisi orci,
+molestie egestas dignissim eget, suscipit vel nunc.
+
+Praesent aliquam tempor
+lectus, sed facilisis urna aliquam non. Nulla facilisi.
+
+ ***
+ 
+Aenean at tellus velit. Aliquam eleifend cursus posuere. Sed semper, justo
+lacinia pharetra ultricies, nulla purus tincidunt enim, non pretium odio ante
+eget velit. Cras luctus dolor vitae eros mattis hendrerit.
+
+Cum sociis natoque
+penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris quis
+augue tortor, in accumsan urna. Sed vestibulum, augue at commodo ultricies, leo
+libero faucibus lorem, nec porta eros massa quis nunc.
+
+Nunc fermentum consequat
+ultricies. Quisque eu arcu ipsum. Donec sollicitudin sapien ut metus pretium non
+lacinia lacus volutpat. Aliquam erat volutpat.
+
+Vivamus quis erat nec tellus
+vehicula placerat. Class aptent taciti sociosqu ad litora torquent per conubia
+nostra, per inceptos himenaeos.
+</div>
 
 # For more information #
 * Markdown - <http://daringfireball.net/projects/markdown/syntax>

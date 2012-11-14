@@ -66,6 +66,30 @@ p, li {
     line-height: 18px;
 }
 
+/* Two Column */
+/* Columns don't appear to work in IE */
+.col2 {
+	-moz-column-count: 2; /* Firefox */
+	-webkit-column-count: 2; /* Safari and Chrome */
+	column-count: 2;
+
+	-moz-column-gap: 40px; /* Firefox */
+	-webkit-column-gap: 40px; /* Safari and Chrome */
+	column-gap: 40px;
+
+	-moz-column-rule: 1px outset #000; /* Firefox */
+	-webkit-column-rule: 1px outset #000; /* Safari and Chrome */
+	column-rule: 1px outset #000;
+}
+
+/* span h1, h2, and hr across all columns
+      said not to work in firefox or IE   */
+h1, h2, hr {
+	-webkit-column-span: all; /* Chrome */
+	-moz-column-span: all;
+	column-span: all;
+}
+
 /* Elements copied from CamenDesign.com  -  http://camendesign.com/design/  */
 /* --- quotes ----------------------------------------------------------------------------------------------------------- */
 q				{font-style: italic;}
