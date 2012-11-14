@@ -1,10 +1,12 @@
-* {
+﻿* {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
+
 body {
     max-width: 50em;
     margin: 0 auto;
     color: #111;
+	background: #fffafa; 
 }
 
 pre, code {
@@ -63,3 +65,52 @@ p, li {
     font-size: 13px;
     line-height: 18px;
 }
+
+/* Elements copied from CamenDesign.com  -  http://camendesign.com/design/  */
+/* --- quotes ----------------------------------------------------------------------------------------------------------- */
+q				{font-style: italic;}
+
+blockquote			{position: relative; margin: 19px 40px 0px;
+				 font: 16px/19px Baskerville, Georgia, serif; color: #666;}
+blockquote:before,		/* large quotes, top and bottom */
+ blockquote:after		{display: block; height: 38px; overflow: hidden;
+				 font: 72px/76px "Baskerville Old Face", Georgia, serif;}
+blockquote:before		{content: "\201C"; margin-left: -40px; margin-bottom: -40px; line-height: 64px;}
+blockquote:after		{content: "\201D"; float: right; margin-top: -45px; margin-right: -40px;
+				 /* compatibility with Firefox 3.0 / Camino 2: */
+				 padding-left: 10px; margin-left: 100%;}
+
+blockquote>p+p			{text-indent: 0;}
+blockquote>cite			{display: block; margin-bottom: 19px; font-size: 13px;}
+blockquote>cite:last-child	{text-align: right;}
+
+/* --- typographical flourishes ----------------------------------------------------------------------------------------- */
+/* drop cap */
+article>section:first-of-type
+ >p:first-of-type:first-letter,
+ hr+p:first-letter		{display: block; float: left; padding: 8px 2px 0 0;
+				 font: 40px/24px Baskerville, "Times New Roman", serif;}
+
+/* book like `<hr />` “thematic break”, i.e. “---------- ♦ ----------” */
+hr				{margin: 0 20% 55px; padding: 19px 0; line-height: 38px;
+				 border: none; border-bottom: 1px solid black; text-align: center;
+				 color: inherit; background-color: inherit;}
+hr:before			{content: "\25C6"; display: inline-block; float: left; position: relative; left: -8px;
+				 margin: 0 50%; padding: 0 4px; background-color: #fffafa; cursor: default; }
+				 
+
+/* === white space ====================================================================================================== */
+/* some typographical / vertical space adjustments for prettiness */
+
+/* if an image is first in an article, increase the space below,
+   e.g. <camendesign.com/code/uth7_floaty-abbrs> */
+section>h1+img			{margin-bottom: 38px;}
+
+/* don’t double-space with headings */
+h1+h2, h2+h3, hr+h2, hr+h3,
+ dl+h2, dl+h3, img+h2, img+h3	{padding-top: 0;}
+
+/* odd spacing cases with `<hr />` */
+dl+hr				{margin-top: -19px;}
+section, figure			{/* required to get the diamond to inherit a background */
+				 background-color: white;}
