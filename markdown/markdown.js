@@ -25,6 +25,7 @@ function createTOC() {
 }
 
 $(function () {
+    $(this).attr("title", $("h1").first().text());
     if ($("#contents").length) {
 	var toc = createTOC();
 	if (toc) {
