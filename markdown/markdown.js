@@ -1,9 +1,9 @@
 /* CREATE TOC */
 
 function createTOC() {
-	var headers = $("h2, h3, h4, h5"),
+	var headers = $("h1, h2, h3, h4, h5"),
 		toc = $("<ul id='innertoc' style='display: none;'></ul>"),
-		wrapper = $("<div id='toc'><h2>Table of contents <span>&#8675;</span><span style='display: none'>&#8673;</span></h2></div>").append(toc);
+		wrapper = $("<div id='toc'><h2>Contents <span>&#8675;</span><span style='display: none'>&#8673;</span></h2></div>").append(toc);
 		wrapper.find('h2').click(function() {
 			$('#innertoc').toggle();
 			$('#toc h2 span').toggle();
@@ -25,9 +25,24 @@ function createTOC() {
 }
 
 $(function () {
+    if ($("#contents").length) {
 	var toc = createTOC();
 	if (toc) {
-		$("body").children().first().after(toc);
+		$("#contents").html(toc);
 	}
-});
 
+	var offset = $("#contents").offset();
+	var topPadding = 15;
+	$(window).scroll(function() {
+		if ($(window).scrollTop() > offset.top) {
+        		$("#contents").stop().animate({
+				marginTop: $(window).scrollTop() - offset.top + topPadding
+	             	});
+	        } else {
+			$("#contents").stop().animate({
+				marginTop: 0
+	             	});
+		};
+     	});
+    };
+ });
