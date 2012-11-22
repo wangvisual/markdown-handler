@@ -1,6 +1,6 @@
 <div id="contents"></div>
 # Markdown Display Test #
-**v1.1.2, November 13, 2012**
+**v1.1.3, November 22, 2012**
 
 This file serves three purposes:  
 1) a markdown language reference,  

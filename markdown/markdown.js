@@ -27,22 +27,29 @@ function createTOC() {
 $(function () {
     $(this).attr("title", $("h1").first().text());
     if ($("#contents").length) {
+	$("#contents").wrap('<div id="contentsWrapper" />');
 	var toc = createTOC();
 	if (toc) {
 		$("#contents").html(toc);
 	}
 
-	var offset = $("#contents").offset();
+	var offset = $("#contents").offset().top - parseFloat($('#contents').css('marginTop').replace(/auto/, 0));
 	var topPadding = 15;
 	$(window).scroll(function() {
-		if ($(window).scrollTop() > offset.top) {
+		if ($(this).scrollTop() > offset) {
+			$("#contents").addClass('fixed');
+/*
         		$("#contents").stop().animate({
 				marginTop: $(window).scrollTop() - offset.top + topPadding
 	             	});
+*/
 	        } else {
+			$("#contents").removeClass('fixed');
+/*
 			$("#contents").stop().animate({
 				marginTop: 0
 	             	});
+*/
 		};
      	});
     };
