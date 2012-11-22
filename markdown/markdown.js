@@ -2,12 +2,7 @@
 
 function createTOC() {
 	var headers = $("h1, h2, h3, h4, h5"),
-		toc = $("<ul id='innertoc' style='display: none;'></ul>"),
-		wrapper = $("<div id='toc'><h2>Contents <span>&#8675;</span><span style='display: none'>&#8673;</span></h2></div>").append(toc);
-		wrapper.find('h2').click(function() {
-			$('#innertoc').toggle();
-			$('#toc h2 span').toggle();
-		});
+		toc = $("<ul></ul>");
 	if (!headers.length) {
 		return false;
 	}
@@ -15,42 +10,48 @@ function createTOC() {
 		var $elem = $(this),
 			headerId = $elem.attr('id');
 		if (!headerId) {
-			headerId = "header-" + index;;
+			headerId = "header-" + index;
 			$elem.before($("<a name=\"" + headerId + "\">"));
 		}
 		toc.append($("<li class=\"" + $elem.prop("tagName") + "\"><a href=\"#" + headerId + "\">" + $elem.html() + "</a></li>"));
 	});
 	
-	return wrapper;
+	return toc;
 }
 
 $(function () {
+    // Set page title to the first H1
     $(this).attr("title", $("h1").first().text());
+
+    // If there is a contents div then create the TOC and associated divs
     if ($("#contents").length) {
-	$("#contents").wrap('<div id="contentsWrapper" />');
 	var toc = createTOC();
 	if (toc) {
 		$("#contents").html(toc);
 	}
 
-	var offset = $("#contents").offset().top - parseFloat($('#contents').css('marginTop').replace(/auto/, 0));
+	$("#contents").wrap('<div id="contentsWrapper" />');
+
+	$('<div id="contentsTab">Contents</div>').appendTo("#contentsWrapper");
+
+	var offset = $("#contentsWrapper").offset().top - parseFloat($('#contentsWrapper').css('marginTop').replace(/auto/, 0));
 	var topPadding = 15;
 	$(window).scroll(function() {
 		if ($(this).scrollTop() > offset) {
-			$("#contents").addClass('fixed');
-/*
-        		$("#contents").stop().animate({
-				marginTop: $(window).scrollTop() - offset.top + topPadding
-	             	});
-*/
+			$("#contentsWrapper").addClass('fixed');
 	        } else {
-			$("#contents").removeClass('fixed');
-/*
-			$("#contents").stop().animate({
-				marginTop: 0
-	             	});
-*/
+			$("#contentsWrapper").removeClass('fixed');
 		};
      	});
-    };
- });
+    	$("#contentsTab").click(function(event) {
+        	event.stopPropagation();
+		if ($("#contentsWrapper").css("left") == '-319px') {
+			$("#contentsWrapper").animate({left: '0px'}, 500);
+		} else {
+			$("#contentsWrapper").animate({left: '-319px'}, 500);
+    		}
+   	});
+};
+
+
+});

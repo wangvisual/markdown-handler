@@ -41,25 +41,50 @@ nav p {
 
 #contentsWrapper {
 	position: absolute;
-	left: 0.25em;
+	top: 1.5em;
+	left: -319px;
 	margin-left: 0.25em;
-	width: 18em;
+	height: 100%;
+}
+
+#contentsWrapper.fixed {
+	position: fixed;
+	top: 1.5em;
+}
+#contentsTab
+{
+    position: relative;
+    top: 2.25em;
+    left: -1.45em;
+    border-bottom: none;
+    background-color: blanchedAlmond;
+    color: black;
+    float: left;
+    margin: 0px;
+    padding: 0.5em 0.5em 0.25em 0.5em;
+    text-align: center;
+    -webkit-transform: rotate(90deg);
+       -moz-transform: rotate(90deg);
+    -webkit-border-radius: 6px 6px 0px 0px;
+       -moz-border-radius: 6px 6px 0px 0px;
+            border-radius: 6px 6px 0px 0px;
 }
 
 #contents{
-	position: absolute;
-	top: 0;
+	position: relative;
+	float: left;
 	border: 2px solid #AF9EA8;
 	font-size: 60%;
 	padding: 0 0.5em;
-	width: 18em;
+	max-width: 300px;
 	border-radius: .6em;
-	-moz-border-radius: .6em;	
+	overflow: hidden;
+	background-color: snow;
+	-webkit-border-radius: .6em;
+	   -moz-border-radius: .6em;
+                border-radius: .6em;
 }
-#contents.fixed {
-	position: fixed;
-	top: 1.25em;
-}
+
 #contents div {
 	margin: 10px 0;
 }
