@@ -3,7 +3,7 @@
 <html>
   <head>
 	<meta name="content-type" http-equiv="content-type" value="text/html; utf-8"/>
-	<link rel="stylesheet" type="text/css" href="/markdown/md-styles.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo str_replace(basename(__FILE__), 'md-styles.css', $_SERVER['SCRIPT_NAME']); ?>">
 	<?php echo "<title>", basename(realpath($_SERVER['PATH_TRANSLATED'])), "</title>"; ?>
 	
 	<script type="text/javascript"
