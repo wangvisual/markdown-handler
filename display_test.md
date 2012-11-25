@@ -1,21 +1,23 @@
 <div id="contents"></div>
 # Markdown Display Test #
-**v1.1.3, November 22, 2012**
+**v1.2.0, November 25, 2012**
 
 This file serves three purposes:  
 1) a markdown language reference,  
 2) a test file to ensure that the markdown is being interpreted propertly, and   
-3) a place to test out changes to the accompaning CSS file.
+3) a place to test out changes to the accompaning CSS file (`md-styles.css`).
 
 Let us begin:
 
-# Contents
+# Table of Contents (JS)
 Include an empty div with `id="contents"` at start of file to have a floating 
 table of contents automatically generated. eg:
 ~~~
 	<div id="contents"></div>
 ~~~
 The Table of Contents div scrolls down with the page and is generated from headers.
+This is generated through the use of JavaScript and is not (directly) a part of
+Markdown.
 
 # Headers
 
@@ -77,11 +79,11 @@ two trailing spaces
 can be used  
 for things like poems  
 
-	Now some inline markup like _italics_,  **bold**, and `code()`. Note that underscores in 
-	words are ignored in Markdown Extra.
+	Now some inline markup like _italics_,  **bold**, and `code()`. Note
+	that underscores in words are ignored in Markdown Extra.
 
-Now some inline markup like _italics_,  **bold**, and `code()`. Note that underscores in 
-words are ignored in Markdown Extra.
+Now some inline markup like _italics_,  **bold**, and `code()`. Note
+that underscores in words are ignored in Markdown Extra.
 
 	> Blockquotes are like quoted text in email replies
 	>> And, they can be nested
@@ -103,25 +105,30 @@ DIV attribute (the 'markdown=1' part), it ignores the block.
 
 # Links #
 
-	Here is a Markdown link to [Google](http://google.com). 
-
-	This is [an example][id] reference-method link.
-	[id]: http://example.com/ "Optional Title Here"
-
+	Here is a Markdown link to [Google](http://google.com).
 	
-	<http://example.com/>
-	<address@example.com>
-
 Here is a Markdown link to [Google](http://google.com). 
 
-This is [an example][id] reference-method link.  
+	This is [an example][id] reference-method link.
+	
+	[id]: http://example.com/ "Optional Title Here"
+
+This is [an example][id] reference-method link.
+  
 [id]: http://example.com/ "Optional Title Here"
 
+Refernces (the `[id]` part) do not need to follow immediately after the
+link. In fact, I think most people gather them at the end of the document.
 
-<http://example.com/>
+	<http://example.com/>  
+	<address@example.com> 
+
+<http://example.com/>  
 <address@example.com>
 
-As a bonus, email addresses are automatically obscured.
+As a bonus, email addresses are automatically obscured. Notice that web
+addresses need to be in angle brackets to turn into links. Markdown does
+not otherwise contain automatic link and address detection.
 
 # Images #
 	![Alt text](/path/to/img.jpg "Image call example")
@@ -139,6 +146,7 @@ As a bonus, email addresses are automatically obscured.
 # Lists #
 
 Use *, +, or - to create a list. Use numbers to create a numbered list.
+The actual numbers used are ignored at the present time.
 
 	* Bullet lists are easy too
 	- Another one
@@ -147,6 +155,7 @@ Use *, +, or - to create a list. Use numbers to create a numbered list.
 	1. A numbered list
 	2. Which is numbered
 	3. With periods and a space
+	100. Who said we could count?
 
 * Bullet lists are easy too
 - Another one
@@ -155,13 +164,16 @@ Use *, +, or - to create a list. Use numbers to create a numbered list.
 1. A numbered list
 2. Which is numbered
 3. With periods and a space
+100. Who said we could count?
 
 # Code #
 
-Code can be indented or marked off with ~~~ above and below the block.
+Code can be intended.
 
-    // Code is just text indented a bit
+    // Code is just text indented a bit like this
     which(is_easy) to_remember();
+	
+Code can be marked off with ~~~ above and below the block.
 
 ~~~
 // Markdown extra adds un-indented code blocks too
@@ -172,12 +184,12 @@ if (this_is_more_code == true && !indented) {
 ~~~
 <!-- _ this is just to make it display nice is Notepad++ -->
 
-For inline code:
+Code can be inline:
 
-	Use `<div>` tags
+	Use `<div>` tags  
 	`echo uname -a`
 
-Use `<div>` tags
+Use `<div>` tags  
 `echo uname -a`
 
 # Horizontal rules
@@ -198,12 +210,12 @@ porta eros massa quis nunc.
 
 # Tables (Markdown-Plus) #
 
-	| Header | Header | Right  |
+	| Header | Header | Right |
 	| ------ | ------ | -----: |
 	|  Cell  |  Cell  |   $10  |
 	|  Cell  |  Cell  |   $20  |
 
-| Header | Header | Right  |
+| Header | Header | Right |
 | ------ | ------ | -----: |
 |  Cell  |  Cell  |   $10  |
 |  Cell  |  Cell  |   $20  |
@@ -279,7 +291,7 @@ can make sure Markdown doesn't interpret these characters by placing a backslash
 # SmartyPants #
 SmartyPants transforms:
 
-* straight quotes (" and ') in "curly" 'quotes'
+* straight quotes (`"` and `'`) in "curly" 'quotes'
 * Backtick quotes into ``curly'' quotes
 * Dashed in en- and em- dashes: -- and ---
 * Three consecutive dots in an ellipsis: ...
@@ -293,9 +305,10 @@ SmartyPants transforms:
  * between a value and common unit symbols  12 kg  and 10 °C
 	
 # MathJax #
-Math display via MathJax has been activated, allowing the typing of math formulas. For more
-information about MathJax: <http://www.mathjax.org/>. For
-more information on how to use this: <https://github.com/drdrang/php-markdown-extra-math>.
+Math display via MathJax has been activated, allowing the typing of math formulas.
+For more information about MathJax: <http://www.mathjax.org/>. For
+more information on how to use this:
+<https://github.com/drdrang/php-markdown-extra-math>.
 In general formulas are encapsulated by \ ( and \ ) or \ [ and \ ].
 
 Formulas can be inline
@@ -353,12 +366,14 @@ v_\infty \left[ \pi a + \frac{2d}{\pi a + 2dw^{-1/2}(w-1)^{1/2}} \right]^-\)
 This is text that is supposed to be displayed in
 2 columns. Invoke columns by using:
 ~~~
-	<div class="col2" markdown="1"> text here </div>
+	<div class="col2" markdown="1">
+	text here
+	</div>
 ~~~
 Markdown will be rendered. `<H1>`, `<H2>`, and `<hr>` will span both columns.
 This is not a function of the Markdown, but rather the stylesheet.
 
-..
+...
 
 # Two Column Break ============ &
 
@@ -405,6 +420,7 @@ nostra, per inceptos himenaeos.
 </div>
 
 # For more information #
+* Markdown Handler for Apache (this project) - <https://github.com/MinchinWeb/markdown-handler>
 * Markdown - <http://daringfireball.net/projects/markdown/syntax>
 * Markdown Plus - <http://michelf.ca/projects/php-markdown/extra/>
 * SmartyPants (in php) - <http://michelf.ca/projects/php-smartypants/>
