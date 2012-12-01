@@ -1,5 +1,4 @@
-/*@import url(http://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700,700italic&subset=latin); */
-@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700,700italic&subset=latin);
 
 html, body {
         padding:1em;
@@ -9,8 +8,7 @@ html, body {
 	}
 body {
 	font-size: 1.3em;
-/*	font-family: "Vollkorn", Palatino, Times, serif; */
-	font-family: serif;
+	font-family: "Vollkorn", Palatino, Times, serif;
 	color: #333;
 	line-height: 1.4;
 	text-align: justify;
@@ -276,6 +274,7 @@ h1+h2, h2+h3, hr+h2, hr+h3,
 dl+hr				{margin-top: -19px;}
 section, figure			{/* required to get the diamond to inherit a background */
 				 background-color: white;}
+				 
 /* iPad
 -------------------------------------------------------- */
 @media only screen and (max-device-width: 1024px) {
