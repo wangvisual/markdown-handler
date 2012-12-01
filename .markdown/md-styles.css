@@ -1,4 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700,700italic&subset=latin);
+/*@import url(http://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700,700italic&subset=latin); */
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700);
 
 html, body {
         padding:1em;
@@ -7,7 +8,9 @@ html, body {
         background: snow;
 	}
 body {
-	font: 1.3em "Vollkorn", Palatino, Times;
+	font-size: 1.3em;
+/*	font-family: "Vollkorn", Palatino, Times, serif; */
+	font-family: serif;
 	color: #333;
 	line-height: 1.4;
 	text-align: justify;
@@ -105,10 +108,11 @@ h1 {
 h2 {
 	font-weight: normal;
 	}
+	
 h3 {
 	font-weight: normal;
 	font-style: italic;
-	margin-top:3em;
+/*	margin-top:3em; */
 	}
 
 a {
@@ -297,4 +301,38 @@ article {
 	display: none;
 	}
 } /* @iPhone */
+
+/* Printing
+-------------------------------------------------------- */
+@media print {
+body {
+    background: white;
+	color: black;
+	width: 100%;
+	margin: 0;
+	float: none;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 10pt;
+}
+a :link, a:visited{
+	color: #000000;
+	text-decoration: underline;
+	background: transparent;
+}
+span.gc-cs-link {  /* If Google Voice extention is installed in Chrome */
+	color: #000000;
+	text-decoration: none;
+	background: transparent;
+}
+tr, td, th {
+	page-break-inside: avoid
+}
+thead {
+	display:table-header-group
+}
+.no-print, #contents {
+	visibility: hidden;
+	display: none;
+}
+} /* Printing */
 
