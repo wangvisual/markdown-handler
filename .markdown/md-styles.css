@@ -209,9 +209,9 @@ li.H6 {
 	-webkit-column-count: 2; /* Safari and Chrome */
 	column-count: 2;
 
-	-moz-column-gap: 40px; /* Firefox */
-	-webkit-column-gap: 40px; /* Safari and Chrome */
-	column-gap: 40px;
+	-moz-column-gap: 3em; /* Firefox */
+	-webkit-column-gap: 3em; /* Safari and Chrome */
+	column-gap: 3em;
 
 	-moz-column-rule: 1px outset #000; /* Firefox */
 	-webkit-column-rule: 1px outset #000; /* Safari and Chrome */
@@ -227,21 +227,30 @@ h1, h2, hr {
 }
 
 /* Elements copied from CamenDesign.com  -  http://camendesign.com/design/  */
+/* 76px = 5.846em  
+   72px = 5.538em
+   64px = 4.923em
+    45px = 3.462em
+    40px = 3em (3.077em)
+	38px = 2.923em
+	24px = 1.846em
+    19px = 1.462em
+    16px = 1.231em	*/
 /* --- quotes ----------------------------------------------------------------------------------------------------------- */
 q				{font-style: italic;}
 
-blockquote			{position: relative; margin: 19px 40px 0px;
-				 font: 16px/19px Baskerville, Georgia, serif; color: #666;}
+blockquote			{position: relative; margin: 24px 40px 0px;
+				 font: 90% Baskerville, Georgia, serif; color: #666;}
 blockquote:before,		/* large quotes, top and bottom */
  blockquote:after		{display: block; height: 38px; overflow: hidden;
-				 font: 72px/76px "Baskerville Old Face", Georgia, serif;}
+				 font: 400% "Baskerville Old Face", Georgia, serif;}
 blockquote:before		{content: "\201C"; margin-left: -40px; margin-bottom: -40px; line-height: 64px;}
 blockquote:after		{content: "\201D"; float: right; margin-top: -45px; margin-right: -40px;
 				 /* compatibility with Firefox 3.0 / Camino 2: */
 				 padding-left: 10px; margin-left: 100%;}
 
 blockquote>p+p			{text-indent: 0;}
-blockquote>cite			{display: block; margin-bottom: 19px; font-size: 13px;}
+blockquote>cite			{display: block; margin-bottom: 19px; font-size: 100%;}
 blockquote>cite:last-child	{text-align: right;}
 
 /* --- typographical flourishes ----------------------------------------------------------------------------------------- */
@@ -249,10 +258,10 @@ blockquote>cite:last-child	{text-align: right;}
 article>section:first-of-type
  >p:first-of-type:first-letter,
  hr+p:first-letter		{display: block; float: left; padding: 8px 2px 0 0;
-				 font: 40px/24px Baskerville, "Times New Roman", serif;}
+				 font: 3em/1.846em Baskerville, "Times New Roman", serif;}
 
 /* book like `<hr />` “thematic break”, i.e. “---------- ♦ ----------” */
-hr				{margin: 0 20% 55px; padding: 19px 0; line-height: 38px;
+hr				{margin: 0 20% 55px; padding: 24px 0; line-height: 2.923em;
 				 border: none; border-bottom: 1px solid black; text-align: center;
 				 color: inherit; background-color: inherit;}
 hr:before			{content: "\25C6"; display: inline-block; float: left; position: relative; left: -8px;
@@ -271,7 +280,7 @@ h1+h2, h2+h3, hr+h2, hr+h3,
  dl+h2, dl+h3, img+h2, img+h3	{padding-top: 0;}
 
 /* odd spacing cases with `<hr />` */
-dl+hr				{margin-top: -19px;}
+dl+hr				{margin-top: -1.462em;}
 section, figure			{/* required to get the diamond to inherit a background */
 				 background-color: white;}
 				 
@@ -334,4 +343,3 @@ thead {
 	display: none;
 }
 } /* Printing */
-
