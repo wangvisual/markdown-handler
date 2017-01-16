@@ -2,13 +2,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-	<meta name="content-type" http-equiv="content-type" value="text/html; utf-8"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo str_replace(basename(__FILE__), 'md-styles.css', $_SERVER['SCRIPT_NAME']); ?>">
-	<?php echo "<title>", basename(realpath($_SERVER['PATH_TRANSLATED'])), "</title>"; ?>
-	
-	<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-	<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
-	<script src="<?php echo str_replace(basename(__FILE__), 'markdown.js', $_SERVER['SCRIPT_NAME']); ?>"></script>
+    <meta name="content-type" http-equiv="content-type" value="text/html; utf-8"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo str_replace(basename(__FILE__), 'md-styles.css', $_SERVER['SCRIPT_NAME']); ?>">
+    <?php echo "<title>", basename(realpath($_SERVER['PATH_TRANSLATED'])), "</title>"; ?>
+    <!--script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script-->
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="<?php echo str_replace(basename(__FILE__), 'markdown.js', $_SERVER['SCRIPT_NAME']); ?>"></script>
   </head>
   <body>
 <?php
@@ -19,9 +18,7 @@ require('smartypants.php');
 $legalExtensions = array('md', 'markdown', 'mdown');
 
 $file = realpath($_SERVER['PATH_TRANSLATED']);
-if($file &&
-   in_array(strtolower(substr($file, strrpos($file, '.') + 1)),
-	    $legalExtensions)) {
+if($file && in_array(strtolower(substr($file, strrpos($file, '.') + 1)), $legalExtensions)) {
   echo SmartyPants(Markdown(file_get_contents($file)));
 }
 else {
