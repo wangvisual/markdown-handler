@@ -44,6 +44,8 @@ nav p {
 	position: absolute;
 	top: 1.5em;
 	left: -319px;
+	min-width: 339px;
+	width: 339px;
 	margin-left: 0.25em;
 	height: 100%;
 }
@@ -150,7 +152,7 @@ pre code {
 
 code {
     background-color: #F0E8E8;
-    padding: 3px;
+    padding: 0px;
     border-radius: 6px;
     -moz-border-radius: 6px;	
 }

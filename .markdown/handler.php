@@ -7,8 +7,8 @@
 	<?php echo "<title>", basename(realpath($_SERVER['PATH_TRANSLATED'])), "</title>"; ?>
 	
 	<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script src="<?= dirname($_SERVER['SCRIPT_NAME']) ?>/markdown.js"></script>
+	<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="<?php echo str_replace(basename(__FILE__), 'markdown.js', $_SERVER['SCRIPT_NAME']); ?>"></script>
   </head>
   <body>
 <?php
