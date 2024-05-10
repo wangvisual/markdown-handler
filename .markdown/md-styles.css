@@ -5,7 +5,7 @@ html, body {
         margin:auto;
         max-width:90em;
         background: snow;
-    }
+}
 body {
     font-size: 1.3em;
     font-family: "Vollkorn", Palatino, Times, serif;
@@ -83,7 +83,7 @@ nav p {
     background-color: snow;
     -webkit-border-radius: .6em;
        -moz-border-radius: .6em;
-                border-radius: .6em;
+            border-radius: .6em;
 }
 
 #contents div {
@@ -106,7 +106,7 @@ h1 {
 h2 {
     font-weight: normal;
     }
-    
+
 h3 {
     font-weight: normal;
     font-style: italic;
@@ -137,22 +137,21 @@ pre {
     border-color: #777;
     border-style: solid;
     border-radius: 10px;
-    -moz-border-radius: 10px;    
+    -moz-border-radius: 10px;
     padding: 0.5em;
-    background-color: #111;
+    background-color: snow;
     overflow: auto;
-    color: #CCC;
 }
 
 pre code {
-    background-color: #111;
+    background-color: snow;
 }
 
 code {
     background-color: #F0E8E8;
     padding: 0px;
     border-radius: 6px;
-    -moz-border-radius: 6px;    
+    -moz-border-radius: 6px;
 }
 
 p, li {
@@ -183,7 +182,7 @@ th, td {
 #toc h2 {
     cursor: pointer;
     border-bottom: 2px solid #AF9EA8;
-    text-align: center;    
+    text-align: center;
 }
 
 li.H2 {
@@ -227,7 +226,7 @@ h1, h2, hr {
 }
 
 /* Elements copied from CamenDesign.com  -  http://camendesign.com/design/  */
-/* 76px = 5.846em  
+/* 76px = 5.846em
    72px = 5.538em
    64px = 4.923em
     45px = 3.462em
@@ -266,7 +265,7 @@ hr                {margin: 0 20% 55px; padding: 24px 0; line-height: 2.923em;
                  color: inherit; background-color: inherit;}
 hr:before            {content: "\25C6"; display: inline-block; float: left; position: relative; left: -8px;
                  margin: 0 50%; padding: 0 4px; background-color: #fffafa; cursor: default; }
-                 
+
 
 /* === white space ====================================================================================================== */
 /* some typographical / vertical space adjustments for prettiness */
@@ -283,7 +282,7 @@ h1+h2, h2+h3, hr+h2, hr+h3,
 dl+hr                {margin-top: -1.462em;}
 section, figure            {/* required to get the diamond to inherit a background */
                  background-color: white;}
-                 
+
 /* iPad
 -------------------------------------------------------- */
 @media only screen and (max-device-width: 1024px) {

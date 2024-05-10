@@ -8,6 +8,8 @@
     <!--script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script-->
     <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
     <script src="<?php echo str_replace(basename(__FILE__), 'markdown.js', $_SERVER['SCRIPT_NAME']); ?>"></script>
+    <script type=module src="<?php echo str_replace(basename(__FILE__), 'starry-night-highlight.js', $_SERVER['SCRIPT_NAME']); ?>"></script>
+    <link rel=stylesheet href="https://esm.sh/@wooorm/starry-night@3.0.0/style/light.css">
   </head>
   <body>
 <?php
