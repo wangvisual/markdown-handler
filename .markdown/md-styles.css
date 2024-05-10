@@ -1,4 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700,700italic&subset=latin);
+@font-face {
+    font-family: "FiraCode Nerd Font";
+    src: url('FiraCodeNerdFont-Regular.ttf') format('truetype');
+    font-variant-ligatures: none;
+    font-feature-settings: "cv02", "ss01", "ss03", "ss05", "ss07";
+}
 
 html, body {
         padding:1em;
@@ -8,7 +13,7 @@ html, body {
 }
 body {
     font-size: 1.3em;
-    font-family: "Vollkorn", Palatino, Times, serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", Ubuntu, Cantarell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     color: #333;
     line-height: 1.4;
     text-align: justify;
@@ -95,7 +100,7 @@ nav p {
 -------------------------------------------------------- */
 
 pre, code {
-    font-family: "Consolas", "Menlo", "Monaco", monospace, serif;
+    font-family: "FiraCode Nerd Font", "Fira Code", "Consolas", "Menlo", "Monaco", monospace, serif;
     font-size: .9em;
 }
 
@@ -318,7 +323,6 @@ body {
     width: 100%;
     margin: 0;
     float: none;
-    font-family: "Times New Roman", Times, serif;
     font-size: 10pt;
 }
 a :link, a:visited{
