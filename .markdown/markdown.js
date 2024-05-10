@@ -52,3 +52,25 @@ $(function () {
         });
     };
 });
+
+// replace text node with predefined mapping, no regex needed
+$(function () {
+    let mapping = {
+        ":x:": "❌",
+        ":heavy_check_mark:": "✔",
+    };
+    // found all the #text nodes under p
+    var p = document.querySelectorAll('p');
+    p.forEach(function (node) {
+        var textNode = node.childNodes[0];
+        if (textNode.nodeType === 3) {
+            var text = textNode.nodeValue;
+            Object.keys(mapping).forEach(function (key) {
+                if (text.includes(key)) {
+                    textNode.nodeValue = text.replace(key, mapping[key]);
+                }
+            });
+        }
+    });
+});
+
